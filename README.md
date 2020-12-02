@@ -2,7 +2,6 @@
 
 ## Installation
 * HTML file: `index.html`
-* CSS file: `styles/style.css`
 * JavaScript file: `script.js`
 
 ## Usage
