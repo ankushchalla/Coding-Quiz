@@ -134,6 +134,8 @@ function displayScores() {
     var header = document.createElement("h1");
     setAttributes(header, ["class"], ["display-1"], "Highscores");
 
+    // Loops through the highscores stored in local storage and 
+    // displays them.
     var scoreList = document.createElement("ul");
     scoreList.setAttribute("class", "list-group pt-2");
     if (!(highScores === null)) {
@@ -146,6 +148,7 @@ function displayScores() {
             scoreList.appendChild(score);
         }
     }
+    // Styling, structure of page.
     var home = document.createElement("button");
     var clear = document.createElement("button");
     setAttributes(home, ["type", "class"], ["button", "btn btn-primary mt-2 mr-2"], "Home");
@@ -165,6 +168,7 @@ function displayScores() {
 }
 
 function startQuiz() {
+    // Quiz question objects used in buildCard().
     var first = {
         question: "String values must be enclosed within ____ when being assigned to variables.",
         a: "commas",
@@ -190,12 +194,10 @@ function startQuiz() {
         correct: "tundra"
     };
     quizItems = [first, second, third];
-
     document.getElementsByClassName("jumbotron")[0].remove();
 
     quizTimer();
     buildCard(quizItems[index]);
-
 }
 var viewScores = document.getElementById("view-scores");
 viewScores.addEventListener("click", function () {
